@@ -34,7 +34,6 @@
     NSString *helloMessage = @"你好!";
 	[self displayMessage: helloMessage];
 	
-	
 	// Dispay IBM price.
 	
 	// Get IBM price value from a URL
@@ -42,6 +41,9 @@
 
 	// Display
 	[self displayContent: url];
+	
+	// Release url object
+	[url release];
 	 
 }
 

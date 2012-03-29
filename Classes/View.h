@@ -10,7 +10,6 @@
 
 
 @interface View : UIView {
-
 }
 
 // Display a message on the top of the screen
