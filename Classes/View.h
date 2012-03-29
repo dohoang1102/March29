@@ -13,4 +13,12 @@
 
 }
 
+// Display a message on the top of the screen
+- (void) displayMessage:(NSString *) message;
+
+// Display content at given URL
+- (void) displayContent:(NSURL *) url;
+
+
+
 @end
