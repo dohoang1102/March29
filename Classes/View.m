@@ -60,25 +60,25 @@
 - (void) displayContent:(NSURL *)url {
 	
 	// Font that will be used
-	UIFont *ibmPricefont = [UIFont systemFontOfSize: 15.0];
+	UIFont *font = [UIFont systemFontOfSize: 15.0];
 	
 	// Get the view's middle Y coordinate value
 	CGFloat middlePointYCoordinateValue = self.bounds.size.height / 2;
-	CGPoint ibmPricePoint = CGPointMake(0.0, middlePointYCoordinateValue);
+	CGPoint point = CGPointMake(0.0, middlePointYCoordinateValue);
 	
 	NSError *error;
-	NSString *ibmPrice = [[NSString alloc]
+	NSString *string = [[NSString alloc]
 						  initWithContentsOfURL: url
 						  encoding: NSUTF8StringEncoding
 						  error: &error
 						  ];
 	
-	if (ibmPrice == nil) {
-		ibmPrice = [error localizedDescription];
+	if (string == nil) {
+		string = [error localizedDescription];
 	}
 	
 	// Display IBM price value.
-	[ibmPrice drawAtPoint: ibmPricePoint withFont: ibmPricefont];
+	[string drawAtPoint: point withFont: font];
 }
 
 - (void)dealloc {
